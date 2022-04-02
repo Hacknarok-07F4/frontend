@@ -1,0 +1,68 @@
+.gap{
+    flex-grow: 1;
+}
+
+.navbar_container{
+    padding: .25rem;
+    border-bottom: 1px solid #aaa;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .logo_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        img{
+            width: 3rem;
+            height: 3rem;
+            margin: 0 1rem;
+        }
+
+        a {
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: #333;
+        }
+    }
+
+    .login_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 1rem;
+
+        button {
+            padding: .5rem 2rem;
+            border: 1px solid #20bd67;
+            border-radius: .25rem;
+            background: none;
+            font-size: 1rem;
+            transition: .2s ease-in;
+            cursor: pointer;
+            
+            &:hover{
+                border: none;
+                border: 1px solid #11703c;
+                background: #11703c;
+                color: #fff;
+            }
+        }
+
+        img {
+            margin-left: 1.5rem;
+            border-radius: 50%;
+            border: .1rem solid #11703c;
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+        }
+        
+    }
+
+}

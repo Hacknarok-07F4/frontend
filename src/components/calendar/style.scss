@@ -1,0 +1,83 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: .25rem;
+    background: #333;
+    border-radius: .2rem;
+    transition: .3s;
+    width: 100%;
+    max-width: 10rem;
+  }
+
+  .current-month{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  
+  .current-date {
+      border-bottom: 1px solid #1f7ba5;
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem 0;
+  }
+  
+  .current-date h1 {
+      color: #dfebed;
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 300;
+  }
+  
+  .week-days {
+      color: #dfebed;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: .75rem;
+      padding: .25rem;
+
+      li {
+          list-style: none;
+      }
+  }
+  
+  .days {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  
+  .weeks {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 0 .25rem;
+  }
+  
+  .weeks div {
+      display: flex;
+      font-size: .75em;
+      font-weight: 300;
+      justify-content: space-between;
+      margin-bottom: .2rem;
+      width: 100%;
+  }
+  
+  .last-month {
+      opacity: .3;
+  }
+  
+  .weeks span {
+    padding: .15rem;
+    cursor: pointer;
+  }
+  
+  .weeks span.active {
+    background: #115270;
+    border-radius: 1rem;
+  }
