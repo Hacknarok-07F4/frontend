@@ -6,23 +6,23 @@ export default function Calendar() {
 
   return (
         <div className="calendar">
-                <div class="current-date">
+                <div className="current-date">
                     <h1>January 2016</h1>	
                 </div>
 
-                <div class="current-month">
-                    <div class="weeks">
-                        <div class="first">
-                            <span class="last-month">28</span>
-                            <span class="last-month">29</span>
-                            <span class="last-month">30</span>
-                            <span class="last-month">31</span>
+                <div className="current-month">
+                    <div className="weeks">
+                        <div className="first">
+                            <span className="last-month">28</span>
+                            <span className="last-month">29</span>
+                            <span className="last-month">30</span>
+                            <span className="last-month">31</span>
                             <span>01</span>
                             <span>02</span>
-                            <span class="active">03</span>
+                            <span className="active">03</span>
                         </div>
 
-                        <div class="second">
+                        <div className="second">
                             <span>04</span>
                             <span>05</span>
                             <span>06</span>
@@ -32,7 +32,7 @@ export default function Calendar() {
                             <span>10</span>
                         </div>
 
-                        <div class="third">
+                        <div className="third">
                             <span>11</span>
                             <span>12</span>
                             <span>13</span>
@@ -42,7 +42,7 @@ export default function Calendar() {
                             <span>17</span>
                         </div>
 
-                        <div class="fourth">
+                        <div className="fourth">
                             <span>18</span>
                             <span>19</span>
                             <span>20</span>
@@ -51,7 +51,7 @@ export default function Calendar() {
                             <span>23</span>
                             <span>24</span>
                         </div>
-                        <div class="fifth">
+                        <div className="fifth">
                             <span>25</span>
                             <span>26</span>
                             <span>27</span>

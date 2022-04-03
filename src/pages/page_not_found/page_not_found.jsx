@@ -2,6 +2,8 @@ import './style.scss';
 
 import React from 'react';
 
+import Navbar from '../../components/navbar/navbar';
+
 export default function PageNotFound() {
 
   const onSubmit = () => {
@@ -9,8 +11,14 @@ export default function PageNotFound() {
   };
 
   return (
-    <div className="container">
-      Error 404: Page not found
+    <div className="page_not_found">
+      <Navbar />
+      <div className="page_container">
+        <div className="main">
+          <h1>Error 404</h1>
+          <h3>Page not found</h3>
+        </div>
+      </div>
     </div>
   );
 }

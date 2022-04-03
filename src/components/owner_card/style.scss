@@ -1,0 +1,70 @@
+.owner_card{
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    border: 1px solid #aaa;
+    border-radius: .2rem;
+
+    img{
+        width: 100%;
+    }
+
+    .description{
+        border-top: 1px solid #aaa;
+        padding: .5rem;
+
+        .owner{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: .5rem 0;
+
+            img{
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                border: .1rem solid #aaa;
+                margin-right: .5rem;
+            }
+
+            h1{
+                font-size: 1.25rem;
+                margin-bottom: .2rem;
+            }
+        }
+
+         .category{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            .row_header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+    
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    button{
+        padding: .75rem;
+        border: none;
+        background: #aaa;
+        font-size: .9rem;
+        cursor: pointer;
+        transition: .2s ease-in;
+
+        &:hover{
+            background: #11703c;
+            color: #fff;
+        }
+    }
+}
