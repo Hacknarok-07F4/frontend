@@ -9,8 +9,8 @@ export default function Login() {
   };
 
   return (
-    <div className="container">
-      Login Page
+    <div className="login_container">
+      
     </div>
   );
 }

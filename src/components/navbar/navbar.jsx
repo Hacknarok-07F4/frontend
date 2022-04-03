@@ -28,7 +28,7 @@ export default function Navbar() {
         :
         <div className='login_container'>
           <button>Wyloguj się</button>
-          <img src={person} />
+          <Link to="/userProfile"><img src={person} /></Link>
         </div>
       }
     </div>
