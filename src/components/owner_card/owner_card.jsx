@@ -20,7 +20,8 @@ const PropertyRow = ({ property }) => (
     </div>
 );
 
-export default function OwnerCard() {
+export default function OwnerCard({property}) {
+    console.log(property);
   const onSubmit = () => {
 
   };
@@ -34,7 +35,7 @@ export default function OwnerCard() {
         <h1>Jan Kowalski</h1>
       </div>
       <div className="category">
-        <PropertyRowHeader property={{title: "Drukarki", description: 'cena za godzinę'}}/>
+        <PropertyRowHeader property={{title: property.brand, description: 'cena za godzinę'}}/>
         <PropertyRow property={{name: 'Photon Mono X', price: '5,45zł' }}/>
         <PropertyRow property={{name: 'Anycubic Mega SE', price: '4,45zł' }}/>
       </div>

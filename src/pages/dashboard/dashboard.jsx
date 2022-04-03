@@ -1,15 +1,26 @@
 import './style.scss';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import Navbar from '../../components/navbar/navbar';
 import OwnerCard from '../../components/owner_card/owner_card';
 
 export default function Dashboard() {
 
-  const onSubmit = () => {
+    const [data, setData] = useState(null);
+  async function componentDidMount() {
+    try {
+      const res = await fetch('http://localhost:8000/api/printers/1');
+      const printer= await res.json();
+      setData(printer.brand);
+      console.log(data);
+      return printer;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  componentDidMount();
 
-  };
 
   return (
     <div className="dashboard_container">
@@ -44,14 +55,14 @@ export default function Dashboard() {
           </div>
 
           <div className="owners_container">
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
-            <OwnerCard />
+            <OwnerCard property={data}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
+            <OwnerCard property={{brand: 'cos'}}/>
           </div>
         </div>
       </div>
