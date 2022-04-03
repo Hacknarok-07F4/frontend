@@ -110,6 +110,7 @@ body {
                     padding: 1rem;
                     box-shadow: #3c40434d 0px 1px 2px 0px, #3c404326 0px 2px 6px 2px;
                     margin-bottom: .75rem;
+                    max-height: 250px;
 
                     h1{
                         color: #333;
@@ -165,13 +166,15 @@ body {
                         }
                     }
 
-                    button{
+                    a{
                         padding: .25rem .5rem;
                         cursor: pointer;
                         transition: .2s ease-in;
                         background: none;
                         border: 1px solid #aaa;
                         border-radius: .2rem;
+                        color: #333;
+                        text-decoration: none;
 
                         &:hover{
                             background: #11703c;
@@ -182,6 +185,66 @@ body {
 
                     .unavailable{
                         color: #999;
+                    }
+                }
+
+                .materials{
+                    display: flex;
+                    flex-direction: column;
+                    background: #f5f5f5;
+                    border-radius: .2rem;
+                    border: 1px solid #aaa;
+                    padding: 1rem;
+                    box-shadow: #3c40434d 0px 1px 2px 0px, #3c404326 0px 2px 6px 2px;
+                    margin-bottom: .75rem;
+                    max-height: 250px;
+
+                    h1{
+                        color: #333;
+                        margin-bottom: 1rem;
+                    }
+
+                    .row_header{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-bottom: .5rem;
+                        border-bottom: 1px solid #aaa;
+
+                        .name{
+                            width: 50%;
+                        }
+
+                        .price{
+                            width: 30%;
+                        }
+
+                        .availability{
+                            width: 20%;
+                        }
+                        
+                    }
+
+                    .row_material{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: .5rem 0;
+
+                        .name{
+                            width: 50%;
+                        }
+
+                        .price{
+                            width: 30%;
+                        }
+
+                        .availability{
+                            width: 20%;
+                        }
+                        
                     }
                 }
 

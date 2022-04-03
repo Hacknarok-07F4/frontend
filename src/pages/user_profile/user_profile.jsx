@@ -2,6 +2,7 @@ import './style.scss';
 
 import React from 'react';
 
+import { Link } from "react-router-dom"
 import Navbar from '../../components/navbar/navbar';
 import person_2 from '../../images/person_2.jpg';
 
@@ -12,24 +13,42 @@ const UserPropertyRow = ({ property }) => (
   </div>
 );
 
-const ItemRowHeader = () => (
+const  PrinterRowHeader = () => (
   <div className="row_header">
-    <div className="name"></div>
-    <div className="price"></div>
-    <div className="availability"></div>
+    <div className="name">Nazwa</div>
+    <div className="price">Cena za godzinę</div>
+    <div className="availability">Dostępność</div>
     <div className="button_col"></div>
   </div>
 );
 
-const ItemRow = ({ property }) => (
+const PrinterRow = ({ property }) => (
   <div 
   className={`row_printer ${property.availability ? '' : 'unavailable'}`}>
     <div className="name">{ property.name }</div>
     <div className="price">{ property.price }</div>
     <div className="availability">{ property.availability ? 'Tak' : 'Nie' }</div>
-    <div className="button_col">{ property.availability ? <button>Wybierz</button> : ''}</div>
+    <div className="button_col">{ property.availability ? <Link to="/printerPanel">Wybierz</Link> : ''}</div>
   </div>
 );
+
+const  MaterialRowHeader = () => (
+  <div className="row_header">
+    <div className="name">Nazwa</div>
+    <div className="price">Cena za 100g</div>
+    <div className="availability">Dostępność</div>
+  </div>
+);
+
+const MaterialRow = ({ property }) => (
+  <div 
+  className='row_material'>
+    <div className="name">{ property.name }</div>
+    <div className="price">{ property.price }</div>
+    <div className="availability">{ property.availability }kg</div>
+  </div>
+);
+
 
 export default function UserProfile() {
 
@@ -61,19 +80,19 @@ export default function UserProfile() {
             {/* Printers */}
             <div className="printers">
               <h1>Drukarki</h1>
-              <ItemRowHeader/>
-              <ItemRow property={{name: 'Photon Mono X', price: '5,45zł', availability: true}} />
-              <ItemRow property={{name: 'Anycubic Mega SE', price: '4,45zł', availability: true}} />
-              <ItemRow property={{name: 'Prusa i3 MK3S+', price: '3,45zł', availability: false}} />
+              <PrinterRowHeader/>
+              <PrinterRow property={{name: 'Photon Mono X', price: '5,45zł', availability: true}} />
+              <PrinterRow property={{name: 'Anycubic Mega SE', price: '4,45zł', availability: true}} />
+              <PrinterRow property={{name: 'Prusa i3 MK3S+', price: '3,45zł', availability: false}} />
             </div>
 
             {/* Materials */}
-            <div className="printers">
+            <div className="materials">
               <h1>Materiały</h1>
-              <ItemRowHeader/>
-              <ItemRow property={{name: 'ABS 1,75mm zielony', price: '2,32zł', availability: true}} />
-              <ItemRow property={{name: 'Anycubic Mega SE', price: '4,45zł', availability: true}} />
-              <ItemRow property={{name: 'Prusa i3 MK3S+', price: '3,45zł', availability: false}} />
+              <MaterialRowHeader/>
+              <MaterialRow property={{name: 'ABS 1,75mm zielony', price: '7,32zł', availability: '0,67'}} />
+              <MaterialRow property={{name: 'ABS 1.75mm czerwony', price: '8,50zł', availability: '0,88'}} />
+              <MaterialRow property={{name: 'ABS 1.75mm niebieski', price: '9,45zł', availability: '0,43'}} />
             </div>
           </div>
         </div>

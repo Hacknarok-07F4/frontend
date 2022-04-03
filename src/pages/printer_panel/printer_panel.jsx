@@ -1,6 +1,6 @@
 import './style.scss';
 
-import person from '../../images/person.jpg';
+import person from '../../images/person_2.jpg';
 import file from '../../images/file.png'
 
 import dpd_logo from '../../images/dpd_logo.png'
@@ -20,7 +20,7 @@ import React, { useState } from 'react';
 
 export default function PrinterPanel() {
   const printerName = "ANYCUBIC Photon Mono X";
-  const ownerName = "Pablo Escobar";
+  const ownerName = "Jan Kowalski";
   const material = "ABS 1.75mm Zielony";
   const deliveryDate = "03.04.2022 12:30";
   const deliveryType = "Paczkomaty 24h";

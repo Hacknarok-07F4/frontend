@@ -25,7 +25,13 @@
         a {
             font-size: 1.25rem;
             text-decoration: none;
+            color: #555;
+            margin-right: 2rem;
+        }
+
+        a:first-of-type {
             color: #333;
+            margin-right: 3rem;
         }
     }
 

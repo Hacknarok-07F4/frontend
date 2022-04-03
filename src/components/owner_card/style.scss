@@ -54,13 +54,16 @@
         }
     }
 
-    button{
+    a{
         padding: .75rem;
         border: none;
         background: #aaa;
         font-size: .9rem;
         cursor: pointer;
         transition: .2s ease-in;
+        color: #333;
+        text-decoration: none;
+        text-align: center;
 
         &:hover{
             background: #11703c;

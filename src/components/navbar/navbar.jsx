@@ -13,6 +13,8 @@ export default function Navbar() {
       <div className='logo_container'>
         <img src={logo}/>
         <Link to="/dashboard">NearbyPrinter</Link>
+        <Link to="/dashboard">Pomoc</Link>
+        <Link to="/dashboard">O nas</Link>
       </div>
       <div className="button_container">
 
@@ -21,11 +23,11 @@ export default function Navbar() {
       {
        isLogged ?
         <div className='login_container'>
-          <button>Register</button>
+          <button>Zarejestruj się</button>
         </div>
         :
         <div className='login_container'>
-          <button>Logout</button>
+          <button>Wyloguj się</button>
           <img src={person} />
         </div>
       }
